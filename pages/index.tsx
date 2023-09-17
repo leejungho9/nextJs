@@ -2,7 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import homeStyles from "../styles/Home.module.css";
 import { getSortedPostsData } from "../lib/posts";
-import { GetStaticProps, NextPage } from "next";
+import { GetStaticProps } from "next";
 
 const Home = ({ allPostData }) => {
   console.log(allPostData);
@@ -34,6 +34,7 @@ const Home = ({ allPostData }) => {
 };
 
 export default Home;
+
 export const getStaticProps: GetStaticProps = async () => {
   const allPostData = getSortedPostsData();
 
